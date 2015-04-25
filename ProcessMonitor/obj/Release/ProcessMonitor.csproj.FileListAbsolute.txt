@@ -1,0 +1,2 @@
+C:\Users\Drew\Dropbox\Programming Projects\C#\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.exe
+C:\Users\Drew\Dropbox\Programming Projects\C#\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.pdb
