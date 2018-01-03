@@ -35,7 +35,7 @@
             // tmrStep
             // 
             this.tmrStep.Enabled = true;
-            this.tmrStep.Interval = 30000;
+            this.tmrStep.Interval = 10000;
             this.tmrStep.Tick += new System.EventHandler(this.tmrStep_Tick);
             // 
             // Test

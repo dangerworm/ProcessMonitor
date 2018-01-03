@@ -1,2 +1,11 @@
 C:\Users\Drew\Dropbox\Programming Projects\C#\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.exe
 C:\Users\Drew\Dropbox\Programming Projects\C#\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.pdb
+D:\GitHub\ProcessMonitor\ProcessMonitor\bin\Release\ProcessMonitor.exe
+D:\GitHub\ProcessMonitor\ProcessMonitor\bin\Release\ProcessMonitor.pdb
+D:\GitHub\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.csprojResolveAssemblyReference.cache
+D:\GitHub\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.Test.resources
+D:\GitHub\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.Properties.Resources.resources
+D:\GitHub\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.csproj.GenerateResource.Cache
+D:\GitHub\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.csproj.CoreCompileInputs.cache
+D:\GitHub\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.exe
+D:\GitHub\ProcessMonitor\ProcessMonitor\obj\Release\ProcessMonitor.pdb
