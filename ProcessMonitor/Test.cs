@@ -16,6 +16,15 @@ namespace ProcessMonitor
             tmrStep_Tick(this, EventArgs.Empty);
         }
 
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        public static extern IntPtr SendMessageTimeout(IntPtr windowHandle, uint Msg, IntPtr wParam, IntPtr lParam, uint fuFlags, uint uTimeout, out IntPtr lpdwResult);
+
+        [DllImport("user32.dll")]
+        private static extern IntPtr GetForegroundWindow();
+
+        [DllImport("user32.dll")]
+        private static extern Int32 GetWindowThreadProcessId(IntPtr windowHandle, out uint lpdwProcessId);
+
         private void Test_Resize(object sender, EventArgs e)
         {
             Hide();
@@ -66,13 +75,7 @@ namespace ProcessMonitor
                 }
             }
         }
-
-        [DllImport("user32.dll")]
-        private static extern IntPtr GetForegroundWindow();
-
-        [DllImport("user32.dll")]
-        private static extern Int32 GetWindowThreadProcessId(IntPtr windowHandle, out uint lpdwProcessId);
-
+       
         private static Process GetProcessByHandle(IntPtr windowHandle)
         {
             try
@@ -86,13 +89,17 @@ namespace ProcessMonitor
             }
         }
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        public static extern IntPtr SendMessageTimeout(IntPtr windowHandle, uint Msg, IntPtr wParam, IntPtr lParam, uint fuFlags, uint uTimeout, out IntPtr lpdwResult);
-
-        private StreamWriter GetStreamWriter()
+        private static StreamWriter GetStreamWriter()
         {
-            var desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            var path = Path.Combine(desktop, "processes.csv");
+            var user = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            var directory = Path.Combine(user, "AppData", "Local", "ProcessMonitor");
+
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            var path = Path.Combine(directory, "processes.csv");
 
             try
             {
@@ -107,7 +114,6 @@ namespace ProcessMonitor
 
         private static void AddProcessData(ref StringBuilder names, Process process, bool isCurrent)
         {
-            var processName = string.Empty;
             var fileDescription = string.Empty;
 
             try
@@ -121,6 +127,7 @@ namespace ProcessMonitor
             {
             }
 
+            string processName;
             if (!string.IsNullOrWhiteSpace(process.MainWindowTitle))
             {
                 processName = process.MainWindowTitle;

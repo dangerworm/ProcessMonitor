@@ -15,14 +15,14 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ManifestCertificateThumbprint>A0F28DA94AC68C3092FF633896EAE0ADBF42326F</ManifestCertificateThumbprint>
     <ManifestKeyFile>ProcessMonitor_TemporaryKey.pfx</ManifestKeyFile>
-    <GenerateManifests>false</GenerateManifests>
+    <GenerateManifests>true</GenerateManifests>
     <SignManifests>false</SignManifests>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <PublishUrl>C:\Users\Drew\Documents\Visual Studio 2010\Projects\ProcessMonitor\Installation Files\</PublishUrl>
+    <PublishUrl>C:\Users\dange\Releases\ProcessMonitor\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
